@@ -1,0 +1,4 @@
+{
+  "logPath" : "/var/log/tax/tax-api.log",
+  "logLevel" : "DEBUG"
+}
