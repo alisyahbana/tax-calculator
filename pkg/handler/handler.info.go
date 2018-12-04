@@ -2,10 +2,10 @@ package handler
 
 import (
 	"encoding/json"
-	"github.com/julienschmidt/httprouter"
 	"github.com/alisyahbana/tax-calculator/pkg/common/app"
 	"github.com/alisyahbana/tax-calculator/pkg/common/env"
 	"github.com/alisyahbana/tax-calculator/pkg/common/log"
+	"github.com/julienschmidt/httprouter"
 	"net/http"
 	"time"
 )

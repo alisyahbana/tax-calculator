@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/julienschmidt/httprouter"
 	"github.com/alisyahbana/tax-calculator/pkg/common/app"
 	"github.com/alisyahbana/tax-calculator/pkg/handler"
+	"github.com/julienschmidt/httprouter"
 	"github.com/urfave/negroni"
 	"net/http"
 )
@@ -22,5 +22,5 @@ func main() {
 
 func SetRoute(router *httprouter.Router) {
 	router.GET("/", handler.InfoHandler)
-	router.GET("/create", handler.CreateHandler)
+	router.POST("/create", handler.CreateHandler)
 }

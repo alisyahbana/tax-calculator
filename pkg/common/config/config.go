@@ -16,7 +16,7 @@ func GetAppURL() url.URL {
 	}
 }
 
-const appName = "qjob-api"
+const appName = "tax-calculator"
 
 func LoadConfiguration(config interface{}, service string, env string) {
 	configPathMap := make(map[string]string)
