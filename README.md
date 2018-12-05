@@ -69,3 +69,4 @@ go run cmd/app/tax-calculator/main.go
         "grand_total": 2280.5
     }
     ```
+5. Run mysql migration from sql/init.sql
