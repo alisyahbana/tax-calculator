@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"github.com/alisyahbana/tax-calculator/pkg/common/app"
+	"github.com/alisyahbana/tax-calculator/pkg/common/log"
 	"github.com/alisyahbana/tax-calculator/pkg/handler"
 	"github.com/julienschmidt/httprouter"
 	"github.com/urfave/negroni"
@@ -17,7 +18,10 @@ func main() {
 	n.UseHandler(router)
 
 	fmt.Println(fmt.Sprintf("Starting Tax-Calculator API HTTP Server on %d", app.GetConfig().Port))
-	http.ListenAndServe(fmt.Sprintf(":%d", app.GetConfig().Port), n)
+	err := http.ListenAndServe(fmt.Sprintf(":%d", app.GetConfig().Port), n)
+	if err != nil {
+		log.Error(err.Error())
+	}
 }
 
 func SetRoute(router *httprouter.Router) {
